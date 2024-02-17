@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Listing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <body>
+      <a href="index.html"><img src="images/imdb.png" class="imdbicon"></a>
+      <button type="button" class="btn btn-outline-secondary custom-button" ><a href="MovieCreation.html" class="addmovie">ADD MOVIE</a></button>
+      <div class="container-fluid">
+      <div class="row" id="my-div">        
+      </div>
+      </div>
+
+<div class="modal fade" id="movieModalCenter" tabindex="-1" role="dialog" aria-labelledby="movieModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered custom-modal" role="document">
+
+    <div class="modal-content">
+      
+      <div class="modal-body">
+          <div class="image-container">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <img class="modal-img" style="width:100%">
+            <span class="text-container"><h3 class="modal-title title-bg"><b></b></h3>
+          <p class="modal-year"></p><p class="modal-genre"></p><p class="modal-plot"></p>
+          <button type="button" class="btn btn-outline-secondary custom-button"><div class="box">
+            <span class="material-icons" style="color:white;">play_arrow</span>
+            <span class="text">Trailer</span>
+          </div></button>    
+        </span>
+        </div><br>
+          <button type="button" class="btn btn-outline-secondary custom-button btn-lg btn-block">Watch Now</button>
+          <br>
+          <div class="box"><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span><span>(4.5) Ratings | </span><span class="material-icons">add</span><span class="text">Add to Wishlist</span></div>
+          <hr style="height:2px;background-color:rgb(4, 19, 75);">
+          <div class="row"><div class="col-sm-7 col-7">
+          <h4>Cast</h4>
+          <div class="container-fluid row">
+            <figure class="mr-3 ml-1"><img src="images/Rakshit.jpg" style="height:140px ;width:140px" class="img-thumbnail"><figcaption><h6>Rakshit Shetty</h6></figcaption></figure>
+            <figure class="mr-3"><img src="images/sangeetha.jpg" style="height:140px ;width:140px" class="img-thumbnail "><figcaption><h6>Sangeetha Sringeri</h6></figcaption></figure>
+            <figure class="mr-3"><img src="images/bobby.jpg" style="height:140px ;width:140px" class="img-thumbnail"><figcaption><h6>Bobby Simha</h6></figcaption></figure>
+            <figure  class=mr-3"><img src="images/ganesh.jpg" style="height:140px ;width:140px" class="img-thumbnail"><figcaption><h6>Ganesh</h6></figcaption></figure>
+          </div>
+          <div>       
+            <h4>Producer</h4>     
+            <figure><img src="images/dilraju.jpeg" style="height:140px ;width:140px" class="img-thumbnail rounded"><figcaption><h6>Dil Raju</h6></figcaption></figure>
+          </div>
+            </div>            
+          <div class="col-sm-5">
+            <h4>Storyline</h4>
+            <p class="modal-plot"></p>
+            <h4>Release Date</h4><p>June 10,2022</h4>
+              <h4>Languages</h4><p>Tamil,English</p>
+              <h4>Subtitles</h4><p>English [CC], हिन्दी, ಕನ್ನಡ, മലയാളം, தமிழ், తెలుగు</p>
+          </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary custom-button" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="MovieListing.js"></script>
+</body>
+</html>

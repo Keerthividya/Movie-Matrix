@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+ 	<meta charset="utf-8"> 
+ 	<title>Movie Creation</title> 
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<link href="style.css" rel="stylesheet"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head> 
+<body> 
+  <a href="index.html"><img src="images/imdb.png" class="imdbicon"></a>
+  <div class="container ">
+  <form novalidate="novalidate" class="needs-validation"> 
+
+      <h4><b>Enter Movie Details</b></h4>
+        <div class="form-group">
+          <label for="movie-name">Movie Name</label>
+          <input type="text" class="form-control" id="movie-name" placeholder="You know what goes here!" required="required">
+          <div class="valid-feedback">Looks Good!</div>
+          <div class="invalid-feedback">
+            Please provide a movie name.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="year-of-release">Year of Release</label>
+          <input type="date" class="form-control" id="year-of-release" required="required">
+          <div class="valid-feedback">Looks Good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid year of release.
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="actorInput">Actors</label>
+          <div class="row">
+            <div class="col-lg-10 mb-2">
+                <div class="input-container">
+              <input id="actorInput" class="form-control actor" placeholder="Select from the list" required="required">
+              <span class="dropdown-icon">&#9662;</span>
+            
+                <span id="listContainer" class="collapse">
+                  <ul id="actorList">
+                    <li class="list-group-item list-group-item-action" data-value="Vijay">Vijay</li>
+                    <li class="list-group-item list-group-item-action"data-value="Keerthi">Keerthi</li>
+                    <li class="list-group-item list-group-item-action"data-value="Vishnu">Vishnu</li>
+                    <li class="list-group-item list-group-item-action"data-value="Harish">Harish</li>
+                  </ul>
+                </span>
+            
+                <div class="valid-feedback">Looks Good!</div>
+                <div class="invalid-feedback">
+                  Please select Actor.
+                </div>
+              </div>
+            </div>
+           
+        <div class="col-lg-2">
+          <button type="button" id="actor" class="btn btn-outline-secondary btn-block custom-button" data-toggle="modal" data-target="#Modal" data-person="Actor">ADD ACTOR</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="producers">Producers</label>
+          <div class="row">
+            <div class="col-lg-10 mb-2">
+          <select class="form-control producer" id="producers" required="required">
+            <option value="" selected disabled hidden>Select from the list</option>
+            <option value="DilRaju">Dil Raju</option>
+            <option value="Vishnu">Vishnu</option>
+            <option value="Uday">Uday</option>
+          </select>
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">
+          Please select a producer.
+        </div>       
+      </div>
+        <div class="col-lg-2">
+          <button type="button" class="btn btn-outline-secondary btn-block  custom-button" data-toggle="modal" data-target="#Modal" data-person="Producer">ADD PRODUCER</button>
+          </div>
+        </div>
+
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered custom-modal-two" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel">ADD</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name" class="col-form-label">Name</label>
+            <input type="text" class="form-control" id="name" required="required">
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">
+              Please Enter Name.
+            </div>
+          </div>
+          <div class="form-group">            
+          <label for="Gender">Gender</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male" required="required">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female" required="required">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+            <div class="valid-feedback ml-3">Looks Good!</div>
+            <div class="invalid-feedback ml-3">
+              Please select a Gender.
+            </div>
+          </div>
+          
+          </div>
+          <div class="form-group">
+            <label for="dob">DOB</label>
+            <input type="date" class="form-control" id="dob" required="required">
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">
+              Please select a DOB.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="About" class="col-form-label">About</label>
+            <textarea class="form-control" id="about" required="required" placeholder="Describe"></textarea>
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">
+              Please Enter About.
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary custom-button" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-secondary custom-button" >ADD</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="genreInput">Genres</label>
+    <div class="input-container">
+   <input id="genreInput" class="form-control genre" placeholder="Select from the list" required="required">
+   <span class="dropdown-icon">&#9662;</span>
+
+    <span id="listContainer2" class="collapse">
+      <ul id="genreList">
+        <li class="list-group-item list-group-item-action" data-value="Action" >Action</li>
+        <li class="list-group-item list-group-item-action"data-value="Drama">Drama</li>
+        <li class="list-group-item list-group-item-action"data-value="Romance">Romance</li>
+        <li class="list-group-item list-group-item-action"data-value="Comedy">Comedy</li>
+      </ul>
+    </span>
+ 
+    <div class="valid-feedback">Looks Good!</div>
+    <div class="invalid-feedback">
+      Please select Genre.
+    </div>
+  </div>
+  </div>
+  </div>
+        
+        <div class="form-group">
+          <label for="plot">Plot</label>
+          <textarea class="form-control" id="plot" rows="3" required="required" placeholder="Describe the beautiful story"></textarea>
+          <div class="valid-feedback">Looks Good!</div>
+          <div class="invalid-feedback">
+            Please provide a plot.
+          </div>
+        </div>
+          <div class="form-group">
+            <label for="poster">Poster</label>
+            <input type="file" class="form-control" id="poster" required="required">
+            <div class="valid-feedback">Looks Good!</div>
+            <div class="invalid-feedback">
+              Please select a Poster.
+            </div>
+          </div>
+
+     
+
+
+
+        <button type="submit" class="btn btn-outline-secondary custom-button">ADD</button>
+
+</form> 
+
+</div>
+<script src="MovieCreation.js"></script>
+</body> 
+</html> 
